@@ -1,0 +1,43 @@
+
+
+// e.g shopping-ui  => | web-UI | native mobile UI |
+
+
+//-----------------------------------------------------
+step-1 : indentify UI application state
+//-----------------------------------------------------
+
+        -  products
+        -  reviews
+        -  cart
+        -  User
+//-----------------------------------------------------
+step-2 : indentify action which cause state change
+//-----------------------------------------------------
+
+        - LOAD_PRODUCTS
+        - LOAD_REVIEWS
+        - ADD_NEW_REVIEW
+        - BUY
+        - CHECKOUT
+        ..
+        
+//-----------------------------------------------------
+step-3 : define action creations, i.e function who can return 'action' object
+//-----------------------------------------------------
+
+
+//-----------------------------------------------------
+step-4 : define redurcers to handle 'actions
+//-----------------------------------------------------
+
+
+
+//-----------------------------------------------------
+step-5 : combine all reducer to rootReducer ( i.e function/reducer composition )
+//-----------------------------------------------------
+
+
+//-----------------------------------------------------
+step-6 : create store with rootReducer
+//-----------------------------------------------------

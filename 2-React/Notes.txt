@@ -1,0 +1,57 @@
+
+
+
+
+ design issues in UI application with react-lib only
+ --------------------------------------------------
+
+  ==> state, state-change and n/w ing logic makes react-component heavy
+  ==> difficult while sharing same state in multiple components
+  ==> Unit-testing not possible/difficult
+
+  ------------------------------------------------------------------
+
+  Soln:
+
+        => MVC pattern
+
+           M => model/state
+           V => view/ui
+           C => controller
+
+           M1       V1
+           M2  /
+               \    
+                    V2
+           M3       V3
+           M4       V4
+
+
+           MVC always apply data-binding in 2 direction  ( 2-way data binding )
+
+
+            limitation in MVC 2-way data binding
+
+                => not able predict data changes/flow in large-scale UI application
+
+
+best-soln:
+
+         => Flux pattern
+
+                i.e uni-directional data flow pattern
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
