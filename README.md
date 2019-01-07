@@ -1,1 +1,1 @@
-# react-new-batch
+# react apps
