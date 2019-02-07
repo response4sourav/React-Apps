@@ -9,13 +9,13 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY 2-React/5-shop-ui-v3/package.json /usr/src/app/package.json
+COPY 2-React/address-app/package.json /usr/src/app/package.json
 #COPY 2-React/5-shop-ui-v3/public/ /usr/src/app/public/
 #COPY 2-React/5-shop-ui-v3/src/ /usr/src/app/src/
 RUN npm install --silent
 RUN npm install react-scripts@1.1.1 -g --silent
 
-COPY 2-React/5-shop-ui-v3/. /usr/src/app/
+COPY 2-React/address-app/. /usr/src/app/
 # start app
 #CMD ["npm", "start"]
 
