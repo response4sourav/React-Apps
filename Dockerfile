@@ -10,6 +10,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
 COPY 2-React/address-app/package.json /usr/src/app/package.json
+COPY default.conf /usr/src/app/default.conf
 #COPY 2-React/5-shop-ui-v3/public/ /usr/src/app/public/
 #COPY 2-React/5-shop-ui-v3/src/ /usr/src/app/src/
 RUN npm install --silent
@@ -24,5 +25,6 @@ RUN npm run build
 # production environment
 FROM nginx:1.13.9-alpine
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html
+COPY /usr/src/app/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
